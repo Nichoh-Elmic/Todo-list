@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1b1b1b;
+            color: #f0f0f0;
+        }
+        .navbar, .footer {
+            background-color: #262626;
+            color: white;
+        }
+        .btn-primary, .btn-warning, .btn-success, .btn-danger {
+            background-color: #ff9800;
+            border-color: #ff9800;
+        }
+        .btn-primary:hover, .btn-warning:hover, .btn-success:hover, .btn-danger:hover {
+            background-color: #e57c00;
+            border-color: #e57c00;
+        }
+        .list-group-item {
+            background-color: #333;
+            color: white;
+        }
+        .list-group-item a {
+            color: #ff9800;
+        }
+        .list-group-item a:hover {
+            color: #e57c00;
+        }
+        input, textarea {
+            background-color: #333;
+            color: white;
+            border-color: #555;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #aaa;
+        }
+        label {
+            color: #ff9800;
+        }
+        .form-control:focus {
+            background-color: #444;
+            color: white;
+            border-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-orange">To-Do List</h1>
+        <hr>
+        {% block content %}
+        {% endblock content %}
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">To-Do List</h1>
+        <hr>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

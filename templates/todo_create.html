@@ -1,0 +1,22 @@
+{% extends 'templates/home.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 o">
+        <h2>Add New To-Do</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="description" class="form-control" id="description" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Create</button>
+            <a href="{% url 'todo_list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock content %}

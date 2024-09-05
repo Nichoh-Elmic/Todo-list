@@ -1,0 +1,12 @@
+{% extends 'templates/home.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h2>{{ todo.title }}</h2>
+        <p>{{ todo.description }}</p>
+        <a href="{% url 'todo_update' todo.id %}" class="btn btn-warning">Edit</a>
+        <a href="{% url 'todo_list' %}" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+{% endblock content %}

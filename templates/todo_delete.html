@@ -1,0 +1,15 @@
+{% extends 'templates/home.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h2>Delete To-Do</h2>
+        <p>Are you sure you want to delete this to-do: <strong>{{ todo.title }}</strong>?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a href="{% url 'todo_list' %}" class="btn btn-secondary">No, Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock content %}
